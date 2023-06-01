@@ -1,0 +1,122 @@
+{
+  "api": {
+    "api2": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "s3demoefeea7fc"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "s3demo25c0b215"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "s3demo5605b3aa": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "s3demo25c0b215": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamo5eff7119"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "s3demoefeea7fc": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamos3prueba"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_s3demo25c0b215_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "s3demo25c0b215"
+        }
+      ]
+    },
+    "AMPLIFY_function_s3demo25c0b215_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "s3demo25c0b215"
+        }
+      ]
+    },
+    "AMPLIFY_function_s3demoefeea7fc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "s3demoefeea7fc"
+        }
+      ]
+    },
+    "AMPLIFY_function_s3demoefeea7fc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "s3demoefeea7fc"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamo5eff7119": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "dynamos3prueba": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "s3demo": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

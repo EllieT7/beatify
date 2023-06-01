@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/song/{songId}": {
+      "name": "/song/{songId}",
+      "lambdaFunction": "s3demoefeea7fc",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/cancion": {
+      "name": "/cancion",
+      "lambdaFunction": "s3demo25c0b215",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

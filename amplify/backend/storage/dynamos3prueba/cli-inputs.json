@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamos3prueba",
+  "tableName": "cancion",
+  "partitionKey": {
+    "fieldName": "song_id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

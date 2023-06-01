@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamo5eff7119",
+  "tableName": "canciones",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify S3 Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Beatify</h1>
+  <form id="upload-form">
+    <div id="input-container">
+    <input class="campo" type="text" name="title" placeholder="Título" id="title-input">
+    <input class="campo" type="text" name="artist" placeholder="Artista" id="artist-input">
+    <input class="campo" type="text" name="album" placeholder="Álbum" id="album-input">
+    <input class="campo" type="text" name="genre" placeholder="Género" id="genre-input">
+  </div>
+    <label class="custom-file-upload">
+      <input type="file" name="filename" id="file-upload" accept=".mp3">
+      Elige una canción 💽
+    </label>
+    <input type="submit" value="Subir 🎈">
+  </form>
+  <h4>Canciones disponibles 🎧</h4>
+  <div class="tracks"></div>
+  <script src="src/script.js"></script>
+</body>
+</html>
